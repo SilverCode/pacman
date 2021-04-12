@@ -1,0 +1,843 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://sprites/wall_straight.png" type="Texture" id=1]
+[ext_resource path="res://sprites/wall_end.png" type="Texture" id=2]
+[ext_resource path="res://sprites/wall_tpiece.png" type="Texture" id=3]
+[ext_resource path="res://sprites/wall_corner.png" type="Texture" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sprites/wall_straight_c.png" type="Texture" id=6]
+[ext_resource path="res://sprites/wall_end_c.png" type="Texture" id=7]
+[ext_resource path="res://sprites/wall_tpiece_c.png" type="Texture" id=8]
+[ext_resource path="res://sprites/wall_corner_c.png" type="Texture" id=9]
+[ext_resource path="res://sprites/wall_gate_c.png" type="Texture" id=10]
+[ext_resource path="res://Warp.tscn" type="PackedScene" id=11]
+[ext_resource path="res://PillSmall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://PillBig.tscn" type="PackedScene" id=13]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=10]
+2/name = "wall_tpiece.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 2 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "wall_end.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 3 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Wall Edge"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 4 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "wall_corner.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 5 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "wall_end_c.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 6 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "wall_straight_c.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 7 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "wall_corner_c.png 8"
+8/texture = ExtResource( 9 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 8 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "wall_tpiece_c.png 9"
+9/texture = ExtResource( 8 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 9 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "wall_gate_c.png 10"
+10/texture = ExtResource( 10 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 1 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 0, 8, 0, 1, -2147483641, 0, 2, -2147483641, 0, 3, -2147483641, 0, 4, -2147483641, 0, 5, -2147483641, 0, 6, -2147483641, 0, 7, -2147483641, 0, 8, -2147483641, 0, 9, -2147483641, 0, 10, -2147483639, 0, 11, -2147483641, 0, 12, -2147483641, 0, 13, -2147483641, 0, 14, -2147483641, 0, 15, -2147483641, 0, 16, -2147483641, 0, 17, -2147483641, 0, 18, -2147483641, 0, 19, -2147483641, 0, 20, 536870920, 0, 65536, 1610612743, 0, 65546, 1610612743, 0, 65556, 1610612743, 0, 131072, 1610612743, 0, 131074, 8, 0, 131075, -1610612729, 0, 131076, 536870920, 0, 131078, 8, 0, 131079, -1610612729, 0, 131080, 536870920, 0, 131082, 1610612743, 0, 131084, 8, 0, 131085, -1610612729, 0, 131086, 536870920, 0, 131088, 8, 0, 131089, -1610612729, 0, 131090, 536870920, 0, 131092, 1610612743, 0, 196608, 1610612743, 0, 196610, 1610612743, 0, 196612, 1610612743, 0, 196614, 1610612743, 0, 196616, 1610612743, 0, 196618, 1610612743, 0, 196620, 1610612743, 0, 196622, 1610612743, 0, 196624, 1610612743, 0, 196626, 1610612743, 0, 196628, 1610612743, 0, 262144, 1610612743, 0, 262146, 1073741832, 0, 262147, -1610612729, 0, 262148, 1610612744, 0, 262150, 1073741832, 0, 262151, -1610612729, 0, 262152, 1610612744, 0, 262154, 1610612742, 0, 262156, 1073741832, 0, 262157, -1610612729, 0, 262158, 1610612744, 0, 262160, 1073741832, 0, 262161, -1610612729, 0, 262162, 1610612744, 0, 262164, 1610612743, 0, 327680, 1610612743, 0, 327700, 1610612743, 0, 393216, 1610612743, 0, 393218, 8, 0, 393219, -1610612729, 0, 393220, 536870920, 0, 393222, 6, 0, 393224, 8, 0, 393225, -1610612729, 0, 393226, -1610612729, 0, 393227, -1610612729, 0, 393228, 536870920, 0, 393230, 6, 0, 393232, 8, 0, 393233, -1610612729, 0, 393234, 536870920, 0, 393236, 1610612743, 0, 458752, 1610612743, 0, 458754, 1073741832, 0, 458755, -1610612729, 0, 458756, 1610612744, 0, 458758, 1610612743, 0, 458760, 1073741832, 0, 458761, -1610612729, 0, 458762, -1610612727, 0, 458763, -1610612729, 0, 458764, 1610612744, 0, 458766, 1610612743, 0, 458768, 1073741832, 0, 458769, -1610612729, 0, 458770, 1610612744, 0, 458772, 1610612743, 0, 524288, 1610612743, 0, 524294, 1610612743, 0, 524298, 1610612743, 0, 524302, 1610612743, 0, 524308, 1610612743, 0, 589824, 1073741832, 0, 589825, -2147483641, 0, 589826, -2147483641, 0, 589827, -2147483641, 0, 589828, 536870920, 0, 589830, 9, 0, 589831, -1610612729, 0, 589832, -1610612730, 0, 589834, 1610612742, 0, 589836, -2147483642, 0, 589837, -1610612729, 0, 589838, 1610612745, 0, 589840, 8, 0, 589841, -1073741817, 0, 589842, -1073741817, 0, 589843, -1073741817, 0, 589844, 1610612744, 0, 655364, 7, 0, 655366, 1610612743, 0, 655374, 1610612743, 0, 655376, 7, 0, 720900, 7, 0, 720902, 1610612743, 0, 720904, -2147483640, 0, 720905, -1073741817, 0, 720906, -2147483638, 0, 720907, -1073741817, 0, 720908, -1610612728, 0, 720910, 1610612743, 0, 720912, 7, 0, 786432, -1610612729, 0, 786433, -1610612729, 0, 786434, -1610612729, 0, 786435, -1610612729, 0, 786436, -536870904, 0, 786438, 1610612742, 0, 786440, 1610612743, 0, 786444, 1610612743, 0, 786446, 1610612742, 0, 786448, -1073741816, 0, 786449, -1073741817, 0, 786450, -1073741817, 0, 786451, -1073741817, 0, 786452, -1073741817, 0, 851976, 1610612743, 0, 851980, 1610612743, 0, 917504, -1073741817, 0, 917505, -1073741817, 0, 917506, -1073741817, 0, 917507, -1073741817, 0, 917508, -1610612728, 0, 917510, 6, 0, 917512, -1073741816, 0, 917513, -1073741817, 0, 917514, -1073741817, 0, 917515, -1073741817, 0, 917516, -536870904, 0, 917518, 6, 0, 917520, -2147483640, 0, 917521, -1073741817, 0, 917522, -1073741817, 0, 917523, -1073741817, 0, 917524, -1073741817, 0, 983044, 7, 0, 983046, 1610612743, 0, 983054, 7, 0, 983056, 7, 0, 1048580, 7, 0, 1048582, 1610612743, 0, 1048584, -2147483640, 0, 1048585, -1610612729, 0, 1048586, -1610612729, 0, 1048587, -1610612729, 0, 1048588, -1610612728, 0, 1048590, 7, 0, 1048592, 7, 0, 1114112, 8, 0, 1114113, -1073741817, 0, 1114114, -1073741817, 0, 1114115, -1073741817, 0, 1114116, -536870904, 0, 1114118, 1610612742, 0, 1114120, -1073741816, 0, 1114121, -1610612729, 0, 1114122, -1610612727, 0, 1114123, -1610612729, 0, 1114124, -536870904, 0, 1114126, 1610612742, 0, 1114128, -1073741816, 0, 1114129, -1073741817, 0, 1114130, -1073741817, 0, 1114131, -1073741817, 0, 1114132, -1610612728, 0, 1179648, 1610612743, 0, 1179658, 1610612743, 0, 1179668, 1610612743, 0, 1245184, 1610612743, 0, 1245186, -1073741818, 0, 1245187, -1610612729, 0, 1245188, -1610612728, 0, 1245190, -2147483642, 0, 1245191, -536870905, 0, 1245192, -536870906, 0, 1245194, 1610612742, 0, 1245196, -2147483642, 0, 1245197, -1610612729, 0, 1245198, -1610612730, 0, 1245200, 8, 0, 1245201, -1073741817, 0, 1245202, -1610612730, 0, 1245204, 1610612743, 0, 1310720, 1610612743, 0, 1310724, 1610612743, 0, 1310736, 1610612743, 0, 1310740, 1610612743, 0, 1376256, 9, 0, 1376257, -1610612729, 0, 1376258, -1610612728, 0, 1376260, 1610612743, 0, 1376262, 6, 0, 1376264, 8, 0, 1376265, -1610612729, 0, 1376266, -1610612729, 0, 1376267, -1610612729, 0, 1376268, -1610612728, 0, 1376270, 6, 0, 1376272, 1610612743, 0, 1376274, 8, 0, 1376275, -1610612729, 0, 1376276, 1610612745, 0, 1441792, 9, 0, 1441793, -1610612729, 0, 1441794, 1610612744, 0, 1441796, 1610612742, 0, 1441798, 7, 0, 1441800, -1073741816, 0, 1441801, -1610612729, 0, 1441802, -1610612727, 0, 1441803, -1610612729, 0, 1441804, 1610612744, 0, 1441806, 7, 0, 1441808, 1610612742, 0, 1441810, -1073741816, 0, 1441811, -1610612729, 0, 1441812, 1610612745, 0, 1507328, 1610612743, 0, 1507334, 1610612743, 0, 1507338, 1610612743, 0, 1507342, 7, 0, 1507348, 1610612743, 0, 1572864, 1610612743, 0, 1572866, -2147483642, 0, 1572867, -2147483641, 0, 1572868, -2147483641, 0, 1572869, -2147483641, 0, 1572870, -1073741815, 0, 1572871, -2147483641, 0, 1572872, -1610612730, 0, 1572874, 1610612742, 0, 1572876, -2147483642, 0, 1572877, -2147483641, 0, 1572878, -1073741815, 0, 1572879, -2147483641, 0, 1572880, -2147483641, 0, 1572881, -2147483641, 0, 1572882, -1610612730, 0, 1572884, 1610612743, 0, 1638400, 1610612743, 0, 1638420, 1610612743, 0, 1703936, -1073741816, 0, 1703937, -1073741817, 0, 1703938, -1073741817, 0, 1703939, -1073741817, 0, 1703940, -1073741817, 0, 1703941, -1073741817, 0, 1703942, -1073741817, 0, 1703943, -1073741817, 0, 1703944, -1073741817, 0, 1703945, -1073741817, 0, 1703946, -1073741817, 0, 1703947, -1073741817, 0, 1703948, -1073741817, 0, 1703949, -1073741817, 0, 1703950, -1073741817, 0, 1703951, -1073741817, 0, 1703952, -1073741817, 0, 1703953, -1073741817, 0, 1703954, -1073741817, 0, 1703955, -1073741817, 0, 1703956, 1610612744, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 336, 656 )
+
+[node name="WarpLeft" parent="." instance=ExtResource( 11 )]
+position = Vector2( -16, 432 )
+target_path = NodePath("../WarpRight")
+
+[node name="WarpRight" parent="." instance=ExtResource( 11 )]
+position = Vector2( 688, 432 )
+target_path = NodePath("../WarpLeft")
+
+[node name="Pills" type="Node2D" parent="."]
+
+[node name="Small" type="Node2D" parent="Pills"]
+
+[node name="PillSmall" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 48 )
+
+[node name="PillSmall2" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 80 )
+
+[node name="PillSmall4" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 144 )
+
+[node name="PillSmall5" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 176 )
+
+[node name="PillSmall6" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 208 )
+
+[node name="PillSmall7" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 240 )
+
+[node name="PillSmall8" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 272 )
+
+[node name="PillSmall9" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 272 )
+
+[node name="PillSmall10" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 272 )
+
+[node name="PillSmall11" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 272 )
+
+[node name="PillSmall12" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 272 )
+
+[node name="PillSmall143" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 304 )
+
+[node name="PillSmall144" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 336 )
+
+[node name="PillSmall145" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 368 )
+
+[node name="PillSmall146" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 400 )
+
+[node name="PillSmall147" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 432 )
+
+[node name="PillSmall149" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 464 )
+
+[node name="PillSmall150" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 496 )
+
+[node name="PillSmall151" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 528 )
+
+[node name="PillSmall152" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 560 )
+
+[node name="PillSmall13" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 240 )
+
+[node name="PillSmall14" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 208 )
+
+[node name="PillSmall15" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 176 )
+
+[node name="PillSmall16" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 176 )
+
+[node name="PillSmall17" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 176 )
+
+[node name="PillSmall18" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 176 )
+
+[node name="PillSmall19" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 48 )
+
+[node name="PillSmall20" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 48 )
+
+[node name="PillSmall21" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 48 )
+
+[node name="PillSmall22" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 48 )
+
+[node name="PillSmall23" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 208, 48 )
+
+[node name="PillSmall24" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 48 )
+
+[node name="PillSmall25" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 48 )
+
+[node name="PillSmall26" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 48 )
+
+[node name="PillSmall27" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 80 )
+
+[node name="PillSmall28" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 112 )
+
+[node name="PillSmall29" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 144 )
+
+[node name="PillSmall30" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 176 )
+
+[node name="PillSmall153" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 336, 176 )
+
+[node name="PillSmall154" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 176 )
+
+[node name="PillSmall155" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 144 )
+
+[node name="PillSmall156" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 112 )
+
+[node name="PillSmall157" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 80 )
+
+[node name="PillSmall158" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 48 )
+
+[node name="PillSmall159" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 48 )
+
+[node name="PillSmall160" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 48 )
+
+[node name="PillSmall161" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 464, 48 )
+
+[node name="PillSmall162" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 48 )
+
+[node name="PillSmall163" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 48 )
+
+[node name="PillSmall164" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 48 )
+
+[node name="PillSmall165" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 48 )
+
+[node name="PillSmall166" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 48 )
+
+[node name="PillSmall167" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 80 )
+
+[node name="PillSmall169" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 144 )
+
+[node name="PillSmall170" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 176 )
+
+[node name="PillSmall171" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 208 )
+
+[node name="PillSmall172" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 240 )
+
+[node name="PillSmall173" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 272 )
+
+[node name="PillSmall174" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 272 )
+
+[node name="PillSmall175" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 272 )
+
+[node name="PillSmall176" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 272 )
+
+[node name="PillSmall177" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 272 )
+
+[node name="PillSmall178" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 240 )
+
+[node name="PillSmall179" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 208 )
+
+[node name="PillSmall180" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 176 )
+
+[node name="PillSmall187" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 464, 176 )
+
+[node name="PillSmall188" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 176 )
+
+[node name="PillSmall190" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 208 )
+
+[node name="PillSmall191" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 240 )
+
+[node name="PillSmall192" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 272 )
+
+[node name="PillSmall193" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 272 )
+
+[node name="PillSmall194" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 272 )
+
+[node name="PillSmall212" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 432 )
+
+[node name="PillSmall217" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 400 )
+
+[node name="PillSmall218" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 368 )
+
+[node name="PillSmall219" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 336 )
+
+[node name="PillSmall220" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 304 )
+
+[node name="PillSmall213" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 464 )
+
+[node name="PillSmall214" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 496 )
+
+[node name="PillSmall215" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 528 )
+
+[node name="PillSmall216" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 560 )
+
+[node name="PillSmall210" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 560 )
+
+[node name="PillSmall189" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 176 )
+
+[node name="PillSmall184" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 176 )
+
+[node name="PillSmall185" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 176 )
+
+[node name="PillSmall186" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 176 )
+
+[node name="PillSmall181" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 144 )
+
+[node name="PillSmall182" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 112 )
+
+[node name="PillSmall183" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 80 )
+
+[node name="PillSmall31" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 176 )
+
+[node name="PillSmall32" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 176 )
+
+[node name="PillSmall37" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 208 )
+
+[node name="PillSmall38" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 240 )
+
+[node name="PillSmall39" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 272 )
+
+[node name="PillSmall40" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 272 )
+
+[node name="PillSmall41" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 272 )
+
+[node name="PillSmall52" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 560 )
+
+[node name="PillSmall53" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 592 )
+
+[node name="PillSmall54" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 592 )
+
+[node name="PillSmall55" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 592 )
+
+[node name="PillSmall56" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 624 )
+
+[node name="PillSmall57" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 656 )
+
+[node name="PillSmall102" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 656 )
+
+[node name="PillSmall103" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 656 )
+
+[node name="PillSmall104" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 688 )
+
+[node name="PillSmall105" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 720 )
+
+[node name="PillSmall106" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 752 )
+
+[node name="PillSmall107" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 752 )
+
+[node name="PillSmall108" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 752 )
+
+[node name="PillSmall109" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 784 )
+
+[node name="PillSmall110" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 304, 816 )
+
+[node name="PillSmall113" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 336, 816 )
+
+[node name="PillSmall111" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 272, 816 )
+
+[node name="PillSmall112" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 240, 816 )
+
+[node name="PillSmall114" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 208, 816 )
+
+[node name="PillSmall115" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 816 )
+
+[node name="PillSmall116" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 816 )
+
+[node name="PillSmall117" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 816 )
+
+[node name="PillSmall118" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 816 )
+
+[node name="PillSmall119" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 816 )
+
+[node name="PillSmall120" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 784 )
+
+[node name="PillSmall121" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 752 )
+
+[node name="PillSmall122" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 752 )
+
+[node name="PillSmall123" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 752 )
+
+[node name="PillSmall124" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 752 )
+
+[node name="PillSmall125" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 752 )
+
+[node name="PillSmall126" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 720 )
+
+[node name="PillSmall127" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 688 )
+
+[node name="PillSmall128" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 656 )
+
+[node name="PillSmall129" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 208, 656 )
+
+[node name="PillSmall130" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 624 )
+
+[node name="PillSmall131" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 592 )
+
+[node name="PillSmall133" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 144, 592 )
+
+[node name="PillSmall134" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 592 )
+
+[node name="PillSmall135" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 592 )
+
+[node name="PillSmall136" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 592 )
+
+[node name="PillSmall137" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 48, 624 )
+
+[node name="PillSmall139" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 80, 656 )
+
+[node name="PillSmall140" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 656 )
+
+[node name="PillSmall141" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 688 )
+
+[node name="PillSmall142" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 112, 720 )
+
+[node name="PillSmall132" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 208, 592 )
+
+[node name="PillSmall58" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 464, 656 )
+
+[node name="PillSmall59" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 656 )
+
+[node name="PillSmall61" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 624 )
+
+[node name="PillSmall62" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 592 )
+
+[node name="PillSmall63" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 592 )
+
+[node name="PillSmall64" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 592 )
+
+[node name="PillSmall65" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 464, 592 )
+
+[node name="PillSmall66" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 592 )
+
+[node name="PillSmall67" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 592 )
+
+[node name="PillSmall68" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 592 )
+
+[node name="PillSmall69" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 592 )
+
+[node name="PillSmall70" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 592 )
+
+[node name="PillSmall71" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 624 )
+
+[node name="PillSmall73" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 656 )
+
+[node name="PillSmall74" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 656 )
+
+[node name="PillSmall75" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 688 )
+
+[node name="PillSmall76" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 720 )
+
+[node name="PillSmall77" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 752 )
+
+[node name="PillSmall79" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 752 )
+
+[node name="PillSmall80" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 752 )
+
+[node name="PillSmall81" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 720 )
+
+[node name="PillSmall82" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 688 )
+
+[node name="PillSmall83" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 656 )
+
+[node name="PillSmall84" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 624 )
+
+[node name="PillSmall78" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 752 )
+
+[node name="PillSmall85" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 752 )
+
+[node name="PillSmall86" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 784 )
+
+[node name="PillSmall87" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 624, 816 )
+
+[node name="PillSmall88" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 592, 816 )
+
+[node name="PillSmall89" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 560, 816 )
+
+[node name="PillSmall90" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 528, 816 )
+
+[node name="PillSmall91" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 496, 816 )
+
+[node name="PillSmall92" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 464, 816 )
+
+[node name="PillSmall93" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 816 )
+
+[node name="PillSmall94" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 816 )
+
+[node name="PillSmall95" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 816 )
+
+[node name="PillSmall96" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 784 )
+
+[node name="PillSmall97" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 368, 752 )
+
+[node name="PillSmall98" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 752 )
+
+[node name="PillSmall99" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 752 )
+
+[node name="PillSmall100" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 720 )
+
+[node name="PillSmall101" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 688 )
+
+[node name="PillSmall60" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 400, 656 )
+
+[node name="PillSmall221" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 432, 656 )
+
+[node name="PillSmall33" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 208, 176 )
+
+[node name="PillSmall34" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 144 )
+
+[node name="PillSmall35" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 112 )
+
+[node name="PillSmall36" parent="Pills/Small" instance=ExtResource( 12 )]
+position = Vector2( 176, 80 )
+
+[node name="Big" type="Node2D" parent="Pills"]
+
+[node name="PillBig" parent="Pills/Big" instance=ExtResource( 13 )]
+position = Vector2( 48, 112 )
+
+[node name="PillBig2" parent="Pills/Big" instance=ExtResource( 13 )]
+position = Vector2( 624, 112 )
+
+[node name="PillBig3" parent="Pills/Big" instance=ExtResource( 13 )]
+position = Vector2( 624, 656 )
+
+[node name="PillBig4" parent="Pills/Big" instance=ExtResource( 13 )]
+position = Vector2( 48, 656 )
